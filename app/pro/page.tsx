@@ -1,6 +1,6 @@
 "use client"
 import { Protect } from '@clerk/clerk-react';
-import { currentUser, useClerk } from '@clerk/nextjs'
+import { currentUser, SignedIn, useClerk,UserButton } from '@clerk/nextjs'
 import { useRouter } from 'next/navigation';
 import React from 'react'
 
@@ -17,6 +17,9 @@ const page = () => {
   // const user = await currentUser();
   return (
     <div>
+      <SignedIn>
+        <UserButton afterSignOutUrl='/'/>
+      </SignedIn>
       
       <button onClick={signout}>
         Sign out

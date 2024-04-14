@@ -1,6 +1,5 @@
 import dbInit from "@/dbconfig"
 import userModel from "@/model";
-import { stringify } from "querystring";
 
 
 export const addUser = async (user:any) =>{
